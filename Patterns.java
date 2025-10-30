@@ -17,10 +17,23 @@ public static void stars(int rows){
             {
             while(startNumber<=rows)
         {
-           System.out.println("*");
-           startNumber++;
+           int j = startNumber;
+           if(startNumber<=j)
+           {
+            System.out.print("*");
+            startNumber++;
+            if (startNumber != j)
+            {
+                System.out.println("");
+                j++;
+            }
+            else
+            j++;
+           } 
+           
           
         } 
+        
         i++;
             }
         else
@@ -31,6 +44,7 @@ public static void stars(int rows){
 public static void main(String[] args){
 
     stars(5);
+    return;
 }
 
 
