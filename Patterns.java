@@ -8,39 +8,44 @@ public class Patterns{
 //  Pre-condition: what must be true prior to the method being called //  including possible limitations on input
 //  Post-condition: what the result of executing this method will be.
 //
+
+
 public static void stars(int rows){
     int i = 1;
-    int startNumber = 1;
+    int j =1;
+    int k=0;
     while (i<=rows)
     {
-        if(rows>0)
-            {
-            while(startNumber<=rows)
-        {
-           int j = startNumber;
-           if(startNumber<=j)
-           {
-            System.out.print("*");
-            startNumber++;
-            if (startNumber != j)
-            {
-                System.out.println("");
-                j++;
-            }
-            else
-            j++;
-           } 
-           
-          
-        } 
         
-        i++;
+        if(rows>0)
+        {
+            
+            while(k<j+i))
+            {
+                System.out.print("*");
+              
+              
             }
-        else
-        System.out.println("");
-       
+            k++;
+            j+=2; 
+            i++;
+            System.out.println("");
+        }
+        
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
 public static void main(String[] args){
 
     stars(5);
