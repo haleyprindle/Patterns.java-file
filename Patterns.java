@@ -62,38 +62,38 @@ public static void triangle(int rows){
 }
 
 
-
-//
-//  Pre-condition: what must be true prior to the method being called //  including possible limitations on input
-//  Post-condition: what the result of executing this method will be.
+// 
+//  Pre-condition: The input has to be an odd number for the method to work.
+//The method won't print out anything if the number is even and it won't work if a string is inputed.
+//  Post-condition: The result of running this method would be a stack of numbers,
+// starting with the start number. It'll repeat the number that number of times. 
+//It will repeat this for each row. It skips over the even numbers; only outputs odd numbers
+// It'll end the stack with the number 1
 //
 public static void odds(int start){
-        
-    for(int i =start; i>0;i--){
+    int number =start;
+    for(int i =start; i>0;i=i-2){
         if(start%2!=0){
-            int number =start;
+        
             for(int j =number;j>0;){
                 System.out.print(number);
-                   j=-2;
+                   j--;
         }
-        number = (start/2)+3;
+        number = number -2;
         System.out.println(); 
         }
-        else
-        {
-            start-=start;
-        }
-}
-
-    
 
 }
+
+    }    
+
+
 
 public static void main(String[] args){
 
     stars(5);
     triangle(5);
-    odds(9);
+    odds(7);
     return;
 }
 //
