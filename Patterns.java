@@ -11,36 +11,20 @@ public class Patterns{
 
 
 public static void stars(int rows){
-    int i = 1;
-    int j =1;
-    int k=0;
-    while (i<=rows)
-    {
-        
-        if(rows>0)
-        {
-            
-            while(k<j+i))
-            {
+   int currentRow = 1;
+
+        while (currentRow <= rows) {
+            int numStars = (2 * currentRow) - 1; // Calculate number of stars for the current row
+            int starCount = 1;
+
+            while (starCount <= numStars) {
                 System.out.print("*");
-              
-              
+                starCount++;
             }
-            k++;
-            j+=2; 
-            i++;
-            System.out.println("");
+            System.out.println(); // Move to the next line after printing stars for the current row
+            currentRow++;
         }
-        
     }
-}
-
-
-
-
-
-
-
 
 
 
@@ -61,6 +45,7 @@ public static void main(String[] args){
 public static void triangle(int rows){
     
 }
+
 
 
 //
