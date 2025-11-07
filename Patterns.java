@@ -89,22 +89,59 @@ public static void odds(int start){
 
 
 
+
+//
+//  Pre-condition: the input has to be a number greater than 0 for there to be an output.
+//  Post-condition: Executing the method will create an alternating rows of Es and Os. 
+// The number of letters in each row increases until the number reaches maxE, then it decreases
+// until the row has one letter.
+// If the number is even, it'll start with the letter O, and if the number is odd it'll start with E.
+//
+public static void eo(int maxE){
+String letter = "E";
+if(maxE%2==0){
+    letter = "O";
+}
+//before the max is reached it increases
+for(int i =1; i<= maxE; i ++){
+    for(int j = 0; j<i; j ++){
+        System.out.print(letter);
+    }
+    System.out.println();
+   if(letter == "O"){
+    letter ="E";
+   }
+   else{
+    letter = "O";
+   }
+}
+
+// when the max is reached, it decreases
+for(int i = maxE-1; i>= 1; i--){
+    for(int j =0; j<i; j++){
+        System.out.print(letter);
+    }
+    System.out.println();
+    if(letter == "O"){
+        letter = "E";
+    }
+    else
+    {
+        letter = "O";
+    }
+}
+
+}
+
+
 public static void main(String[] args){
 
     stars(5);
     triangle(5);
     odds(7);
+    eo(5);
     return;
 }
-//
-//  Pre-condition: what must be true prior to the method being called //  including possible limitations on input
-//  Post-condition: what the result of executing this method will be.
-//
-public static void eo(int maxE){
-
-
-}
-
 
 //
 //  Pre-condition: what must be true prior to the method being called //  including possible limitations on input
@@ -113,6 +150,7 @@ public static void eo(int maxE){
 public static void pyramid(int rows){
 
 }
+
 }
 
 
