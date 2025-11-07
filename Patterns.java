@@ -1,17 +1,17 @@
 //
 //  Class author:  Haley Prindle
 //  Date created: 10/30/25
-//  General description: a brief summary of what this particular class does.
+//  General description: creates row patterns with numbers or strings based on user inputs.
+// Different inputs create different patterns.
 public class Patterns{
 
 //
-//  Pre-condition: The number of rows inputed has to be a number for the method to work. 
+//  Pre-condition: The number of rows inputed has to be an integer for the method to work. 
 // the numbrs has to be greater than 0 for there to be any stars printed.
-//  Post-condition: the result is a stack of stars that print out int rows number of rows. Each row has two more stars than the last. 
-// the first row starts with one star.
+//  Post-condition: the result is a stack of stars that print out int rows number of rows. 
+// Each row has two more stars than the last. 
+// The first row starts with one star.
 //
-
-
 public static void stars(int rows){
    int currentRow = 1;
 
@@ -38,7 +38,7 @@ public static void stars(int rows){
 
 //
 //  Pre-condition: The input for the variable rows has to be greater than 0 for anything to be printed out.
-//Also the input has to be a number for the method to work.
+//Also the input has to be an integer for the method to work.
 //  Post-condition: The result is a stack of numbers with the number of rows that was inputed. 
 //Each row should print out the number of that row, rows times. 
 //ex. inputing 5 for rows should output row one to be: 1, row two to be: 22, row three to be: 333, etc, printing a total of five rows 
@@ -63,7 +63,7 @@ public static void triangle(int rows){
 
 
 // 
-//  Pre-condition: The input has to be an odd number for the method to work.
+//  Pre-condition: The input has to be an odd integer for the method to work.
 //The method won't print out anything if the number is even and it won't work if a string is inputed.
 //  Post-condition: The result of running this method would be a stack of numbers,
 // starting with the start number. It'll repeat the number that number of times. 
@@ -91,7 +91,7 @@ public static void odds(int start){
 
 
 //
-//  Pre-condition: the input has to be a number greater than 0 for there to be an output.
+//  Pre-condition: the input has to be an integer greater than 0 for there to be an output.
 //  Post-condition: Executing the method will create an alternating rows of Es and Os. 
 // The number of letters in each row increases until the number reaches maxE, then it decreases
 // until the row has one letter.
@@ -134,23 +134,41 @@ for(int i = maxE-1; i>= 1; i--){
 }
 
 
+
+
+//
+//  Pre-condition: there must be an integer inputed for the method to work
+//  Post-condition: it will create a number pyramid with the number one repeated at the top,
+//  the inputed row at the bottom, and the in between integers in the body. 
+//  Each row prints the number that the row is. ex. row two will print twos.
+//
+public static void pyramid(int rows){
+    for(int i =1; i <= rows; i ++){
+        for(int space = 1; space < i; space++){
+            System.out.print(" ");
+        }
+        int count = (2*(rows-i))+1;
+        
+        for(int j = 0; j < count; j++){
+            System.out.print(i);
+        }
+        System.out.println();
+    }
+}
+
+
 public static void main(String[] args){
 
     stars(5);
+    stars (4);
     triangle(5);
+    triangle(4);
     odds(7);
+    odds(6);
     eo(5);
+    eo(6);
+    pyramid(6);
+    pyramid(5);
     return;
 }
-
-//
-//  Pre-condition: what must be true prior to the method being called //  including possible limitations on input
-//  Post-condition: what the result of executing this method will be.
-//
-public static void pyramid(int rows){
-
 }
-
-}
-
-
